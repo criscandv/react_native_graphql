@@ -1,0 +1,13 @@
+# Prisma API HTTP endpoint
+endpoint: https://eu1.prisma.sh/cristian-cano/database/dev
+
+# Data model file name
+datamodel: datamodel.graphql
+
+# API access secret
+secret: testsecret
+
+# Deploy hook
+hooks:
+  post-deploy:
+    - graphql get-schema --project database
